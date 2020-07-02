@@ -1,5 +1,5 @@
 <template>
-  <div class="container bg-gray-100 rounded-xl shadow-md">
+  <div class="container bg-gray-100 rounded-xl shadow-md p-2">
     <slot></slot>
   </div>
 </template>
@@ -10,7 +10,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .container{
 
 }

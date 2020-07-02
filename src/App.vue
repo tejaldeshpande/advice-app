@@ -3,7 +3,7 @@
     <div id="nav">
 
     </div>
-    <div class="p-8"><router-view/></div>
+    <router-view class="p-8 app-viewport flex justify-center items-center flex-col"/>
   </div>
 </template>
 
@@ -11,23 +11,38 @@
 @import '~@/sass/variables.scss';
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Raleway;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
+  font-weight: 600;
+  height: 100vh;
 
-#nav {
-  padding: 30px;
+  .app-viewport{
+    height: 100vh;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    &.no-pad{
+      padding: 0;
     }
   }
+}
+
+.heading{
+  color: $color-heading;
+  font-size: $size-heading;
+  font-family: $font-heading;
+  font-weight: 300;
+
+}
+.subtitle{
+  color: $color-heading;
+  font-size: $size-subtitle;
+}
+.box-shadow{
+  top: -6px;
+  width: 97% !important;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
 }
 </style>

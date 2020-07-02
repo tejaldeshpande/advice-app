@@ -7,12 +7,13 @@ module.exports = {
         gray: {
           '100': '#F7F1F0',
         },
-        beige: '#D9CAB8',
-        red:'#FF5101',
+        burgundy:'#660b14',
         yellow:'#e4ca4a',
         primary: '#FF5101',
         primaryDark:'#E82E2E',
         nav:'#1d1d1d',
+        blue:'#053959',
+        teal:'#037f8c'
       },
       boxShadow:{
         md:' 0px 0px 4px rgba(30, 32, 33, 0.6)'
@@ -34,22 +35,15 @@ module.exports = {
         'half': '50vh',
       },
       fontSize:{
-        'xxs':'10px',
-        'xs':'13px',
+        'xs':'14px',
         'sm':'16px',
-        'md':'18px',
-        'reg':'19px',
-        'lg':'24px',
-        'xl':'26px',
-        '3xl':'32px',
-        '4xl':'37px',
-        '2xl':'28px',
-        '5xl':'45px',
-        '6xl':'64px',
-        '7xl':'79px',
+        'md':'20px',
+        'reg':'18px',
+        'lg':'28px',
+        'xl':'36px',
       },
       fontFamily: {
-       'sans': ['Roboto', 'Arial'],
+       'cursive': ['Pacifico', 'Arial'],
       }
     }
   },
