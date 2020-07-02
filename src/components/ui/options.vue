@@ -7,7 +7,7 @@
     <container class="bg-burgundy m-2 py-6 text-white">
       <div>
         <span class="icon-search text-lg"></span>
-        <input/>
+        <!-- <input/> -->
       </div>
       <div class="text-reg ">search a<br>topic!</div>
     </container>
