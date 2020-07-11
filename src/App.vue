@@ -1,14 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <nav-header></nav-header>
 
-    </div>
     <router-view class="p-8 app-viewport flex justify-center items-center flex-col"/>
   </div>
 </template>
 
+<script>
+import navHeader from '@/components/nav/header'
+
+  export default {
+    components: {
+      navHeader
+    },
+
+  }
+</script>
+
+
 <style lang="scss">
 @import '~@/sass/variables.scss';
+
+body,html{
+ // background: white;
+}
 
 #app {
   font-family: Raleway;

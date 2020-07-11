@@ -35,6 +35,7 @@ module.exports = {
         'half': '50vh',
       },
       fontSize:{
+        'xxs':'10px',
         'xs':'14px',
         'sm':'16px',
         'md':'20px',
