@@ -1,22 +1,24 @@
 <template>
-  <div id="Results" class="bg-white">
-    <container class="mb-6"><h1 class="heading">Advice for "{{searchTerm}}"</h1></container>
-    <container class="p-6 py-10 space-y-8 results-container " :class="pageNumber >= pageCount -1 ? '' : 'flex flex-col justify-center' " >
-        <container v-for="p in paginatedData" :key="p.id" class="bg-blue text-white p-4 text-left leading-tight">{{p.advice}}</container>
-    </container>
+  <div id="Results" class=" ">
+    <bg class="bg-aqua"></bg>
+    <template v-if="results">
+      <div class="z-20 relative" style="bottom:30px;">
+        <container class="mb-6"><h1 class="heading">Advice for "{{searchTerm}}"</h1></container>
+        <container class="p-6 py-8 space-y-8 results-container " :class="pageNumber >= pageCount -1 ? '' : 'flex flex-col justify-center' " >
+            <container v-for="p in paginatedData" :key="p.id" class="bg-blue text-white p-4 text-left leading-tight text-sm">{{p.advice}}</container>
+        </container>
+      </div>
 
-    <div class="fixed bottom-0 space-x-10 mb-4 shadow-md border-2 border-blue rounded-full py-2 px-12 text-sm">
-        <button @click="prevPage" :disabled="pageNumber==0" class="text-burgundy  font-bold">
-          <span class="icon-circle-left block text-xl"></span>
-          <!-- <img class="w-10 m-auto" src="content/images/back-btn.svg"> -->
-          back
-        </button>
-        <button @click="nextPage" :disabled="pageNumber >= pageCount -1" class="text-blue  font-bold">
-          <span class="icon-circle-right block  text-xl"></span>
-          <!-- <img class="w-10 m-auto" src="content/images/next-btn.svg"> -->
-          next
-        </button>
-    </div>
+      <navigation @prevPage="prevPage" @nextPage="nextPage" :prevDisabled="prevDisabled" :nextDisabled="nextDisabled"></navigation>
+    </template>
+    <template v-else>
+      <div class="z-20 relative" style="bottom:30px;">
+        <container class="mb-6"><h1 class="heading">Advice for "{{searchTerm}}"</h1></container>
+        <container class="p-6 py-8 space-y-8 results-container" >
+            <container class="bg-blue text-white p-4 text-left leading-tight text-sm"> Sorry, no results found for "{{searchTerm}}"</container>
+        </container>
+      </div>
+    </template>
 
   </div>
 </template>
@@ -39,6 +41,10 @@
         this.pageNumber--;
       }
     },
+    created () {
+      console.log(this.results);
+      ;
+    },
     computed: {
       pageCount(){
         let l = this.results.length,
@@ -49,14 +55,24 @@
         const start = this.pageNumber * this.size,
         end = start + this.size;
         return this.results.slice(start, end);
-      }
+      },
+      prevDisabled(){
+        return this.pageNumber==0
+      },
+      nextDisabled(){
+        return this.pageNumber >= this.pageCount -1
+      },
     },
   }
 </script>
 
 <style lang="scss">
+.bg{
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 38%);
+}
+
 .results-container{
-  min-height: 400px;
+  min-height: 360px;
 }
 
 button:disabled{

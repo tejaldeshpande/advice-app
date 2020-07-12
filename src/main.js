@@ -23,6 +23,10 @@ Vue.component('search-bar', () => import('@/components/ui/search-bar'));
 
 Vue.component('category', () => import('@/components/ui/category'));
 
+Vue.component('bg', () => import('@/components/ui/bg'));
+
+Vue.component('navigation', () => import('@/components/ui/navigation'));
+
 
 
 new Vue({

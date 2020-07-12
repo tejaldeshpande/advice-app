@@ -2,7 +2,7 @@
   <div id="app">
     <nav-header></nav-header>
 
-    <router-view class="p-8 app-viewport flex justify-center items-center flex-col"/>
+    <router-view class="p-10 app-viewport flex justify-center items-center flex-col"/>
   </div>
 </template>
 
@@ -22,7 +22,7 @@ import navHeader from '@/components/nav/header'
 @import '~@/sass/variables.scss';
 
 body,html{
- // background: white;
+  background: white;
 }
 
 #app {
@@ -43,14 +43,14 @@ body,html{
 }
 
 .heading{
-  color: $color-heading;
+  color: $color-primary;
   font-size: $size-heading;
   font-family: $font-heading;
   font-weight: 300;
 
 }
 .subtitle{
-  color: $color-heading;
+  color: $color-primary;
   font-size: $size-subtitle;
 }
 .box-shadow{
