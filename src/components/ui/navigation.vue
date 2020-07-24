@@ -1,5 +1,5 @@
 <template>
-  <div class="navigation fixed bottom-0 space-x-8 mb-4 shadow-md border-2 border-blue rounded-full py-2 px-8 text-xs">
+  <div class="navigation relative bottom-0 space-x-8 shadow-md border-2 border-blue rounded-full py-2 px-8 text-xs">
       <button @click="$emit('prevPage')" :disabled="prevDisabled" class="text-primary  font-bold">
         <span class="icon-circle-left block text-md"></span>
         <!-- <img class="w-10 m-auto" src="content/images/back-btn.svg"> -->
@@ -22,7 +22,7 @@
 
 <style lang="scss" scoped>
 .navigation{
-  transform: translate(-50%, 0);
-  left: 50%;
+  // transform: translate(-50%, 0);
+  // left: 50%;
 }
 </style>

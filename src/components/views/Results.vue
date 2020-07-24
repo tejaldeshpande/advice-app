@@ -1,10 +1,10 @@
 <template>
-  <div id="Results" class=" ">
+  <div id="Results" class=" justify-evenly ">
     <bg class="bg-aqua"></bg>
     <template v-if="results">
-      <div class="z-20 relative" style="bottom:30px;">
+      <div class="z-20 relative"  >
         <container class="mb-6"><h1 class="heading">Advice for "{{searchTerm}}"</h1></container>
-        <container class="p-6 py-8 space-y-8 results-container " :class="pageNumber >= pageCount -1 ? '' : 'flex flex-col justify-center' " >
+        <container class="p-6 space-y-6 results-container " :class="pageNumber >= pageCount -1 ? '' : 'flex flex-col justify-center' " >
             <container v-for="p in paginatedData" :key="p.id" class="bg-blue text-white p-4 text-left leading-tight text-sm">{{p.advice}}</container>
         </container>
       </div>
@@ -67,12 +67,14 @@
 </script>
 
 <style lang="scss">
+#Results{
+
 .bg{
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 38%);
 }
 
 .results-container{
-  min-height: 360px;
+  min-height: 350px;
 }
 
 button:disabled{
@@ -80,6 +82,7 @@ button:disabled{
 }
 button:hover:disabled{
   cursor:not-allowed;
+}
 }
 
 </style>

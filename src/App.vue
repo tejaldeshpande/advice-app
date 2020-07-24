@@ -2,7 +2,7 @@
   <div id="app">
     <nav-header></nav-header>
 
-    <router-view class="p-10 app-viewport flex justify-center items-center flex-col"/>
+    <router-view class="p-8 app-viewport flex justify-center items-center flex-col "/>
   </div>
 </template>
 
@@ -23,6 +23,19 @@ import navHeader from '@/components/nav/header'
 
 body,html{
   background: white;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+  -webkit-overflow-scrolling: auto;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #app {

@@ -6,7 +6,6 @@
       <container class="rounded-b-none border-b-8 border-blue relative p-4 shadow-none">
         <h1 class="heading">Here’s some advice!</h1>
         <h2 class="subtitle">Swipe to see more!</h2>
-        {{results}}
         <container class="box-shadow absolute bg-blue h-10 shadow-none"></container>
       </container>
 

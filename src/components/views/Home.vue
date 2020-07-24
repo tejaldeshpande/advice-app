@@ -38,16 +38,41 @@ import axios from 'axios'
         .finally(() => this.$router.push('results'))
       },
       getAdvice(){
-        for(var i = 0; i <= 3; i++){
-          axios
-          .get('https://api.adviceslip.com/advice')
-          .then(response => (this.results.push(response.data.slip.advice)))
+
+        let promises = [];
+
+        for (var i = 0; i <= 10; i++) {
+         // promises.push(
+            axios.get('https://api.adviceslip.com/advice').then(response => {
+              // do something with response
+              console.log(response.data.slip.advice);
+
+              this.results.push(response.data.slip.advice);
+            })
+          //)
         }
-        this.$store.commit('setAdvice', this.results)
-        console.log(this.$store.state.adviceArray);
-        setTimeout(() => {
+
+        Promise.all(promises).then(() => {
+          console.log(this.results);
+          this.$store.commit('setAdvice', this.results)
           this.$router.push('advice');
-        }, 2000);
+
+        });
+
+
+        // for(var i = 0; i <= 3; i++){
+        //   axios
+        //   .get('https://api.adviceslip.com/advice')
+        //   .then(response => (this.results.push(response.data.slip.advice)))
+        // }
+        // this.$store.commit('setAdvice', this.results)
+        // console.log(this.$store.state.adviceArray);
+        // setTimeout(() => {
+        //   this.$router.push('advice');
+        // }, 2000);
+
+
+
       }
     }
 
