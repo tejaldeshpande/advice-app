@@ -32,5 +32,8 @@ Vue.component('navigation', () => import('@/components/ui/navigation'));
 new Vue({
   router,
   store,
+  created () {
+    this.$router.push('/');
+  },
   render: h => h(App)
 }).$mount('#app')
