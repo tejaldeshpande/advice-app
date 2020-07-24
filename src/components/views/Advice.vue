@@ -9,16 +9,16 @@
         <container class="box-shadow absolute bg-blue h-10 shadow-none"></container>
       </container>
 
-      <!-- <container class="mt-8 rounded-t-none border-t-8 border-blue relative p-4 py-16 text-blue text-lg font-normal">
-        <p>{{info}}</p>
-        <container class="box-shadow shadow-md absolute bg-blue h-10 top-auto" style="bottom:-6px;"></container>
-      </container> -->
+      <container class="mt-8 rounded-t-none border-t-8 border-blue relative p-4 py-16 text-blue text-lg font-normal">
+        <p>{{results[0]}}</p>
+        <!-- <container class="box-shadow shadow-md absolute bg-blue h-10 top-auto" style="bottom:-6px;"></container> -->
+      </container>
 
-      <agile ref="carousel" @after-change="checkSlide">
+      <!-- <agile ref="carousel" @after-change="checkSlide">
             <container v-for="(result, i) in results" :key="i" class="slide mt-8 rounded-t-none border-t-8 border-b-6 border-blue relative p-4  text-blue text-md font-normal h-64 flex items-center justify-center shadow-none">
               {{result}}
             </container>
-      </agile>
+      </agile> -->
 
     </div>
 
